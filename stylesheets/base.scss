@@ -1,0 +1,107 @@
+@import "reset.css";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
+
+$mainLinkColor: #247985;
+$mainLinkHoverColor: #90b52a;
+$mobile: new-breakpoint(max-width 500px 6);
+
+body {
+  font-family: "Open Sans", "Segoe UI", "Myriad Pro", sans-serif;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  @include outer-container;
+}
+
+a {
+  color: $mainLinkColor;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    outline: 0;
+    color: $mainLinkHoverColor;
+  }
+}
+
+header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  margin-bottom: 25px;
+  height: 50px;
+  .logo {
+    float: left;
+    position: relative;
+    top: -10px;
+    margin-right: 10px;
+    h1 {
+      float: left;
+      @include hide-text;
+      background: transparent url(/images/spec.svg) center center no-repeat;
+      width: 40px;
+      height: 64px;
+      background-size: 40px 64px;
+      @include media($mobile) {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    &.full-width {
+      @include span-columns(12);
+      h1 {
+        float: none;
+        margin: 0 auto;
+      }
+    }
+  }
+  .tagline {
+    @include span-columns(2);
+    @include media($mobile) {
+      @include span-columns(6);
+      @include pad(default 20px);
+    }
+    a {
+      color: #666;
+    }
+    h2 {
+      // font-size: 1.1em;
+      line-height: 28px;
+    }
+  }
+  .buttons {
+    @include span-columns(9);
+    @include media($mobile) {
+      @include span-columns(6);
+      @include pad(default 20px);
+    }
+    a {
+      line-height: 28px;
+      font-size: 13px;
+    }
+  }
+  .links {
+    float: left;
+    margin-right: 15px;
+  }
+  .user-links {
+    float: right;
+    margin: 0;
+    padding: 0;
+    li {
+      display: list-item;
+      float: left;
+      margin-left: 5px;
+    }
+  }
+  h2 {
+    display: inline;
+  }
+}
