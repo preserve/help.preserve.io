@@ -1,15 +1,17 @@
 @import "reset.css";
 @import "bourbon/bourbon";
+$max-width: 800px;
 @import "neat/neat";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
 
+$bodyFontColor: #666;
 $mainLinkColor: #247985;
 $mainLinkHoverColor: #90b52a;
 $mobile: new-breakpoint(max-width 500px 6);
 
 body {
   font-family: "Open Sans", "Segoe UI", "Myriad Pro", sans-serif;
-  color: #666;
+  color: $bodyFontColor;
   font-size: 16px;
   line-height: 1.2em;
   text-rendering: optimizeLegibility;
@@ -28,6 +30,10 @@ a {
     outline: 0;
     color: $mainLinkHoverColor;
   }
+}
+
+b, strong {
+  font-weight: bold;
 }
 
 header {
@@ -69,10 +75,10 @@ header {
       @include pad(default 20px);
     }
     a {
-      color: #666;
+      color: $bodyFontColor;
     }
     h2 {
-      // font-size: 1.1em;
+      font-size: 1em;
       line-height: 28px;
     }
   }
@@ -104,4 +110,47 @@ header {
   h2 {
     display: inline;
   }
+}
+
+.article {
+  h3 {
+    border-bottom: 1px solid #CCC;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
+  }
+  ul {
+    margin-bottom: 1em;
+    &.breadcrumbs {
+      @include linear-gradient(#fff, #f7f7f7);
+      border: 1px solid #efefef;
+      font-size: 0.9em;
+      padding: 0.25em;
+      a {
+        color: $bodyFontColor;
+      }
+      li {
+        display: inline;
+        &.current {
+          font-weight: bold;
+        }
+        &:after {
+          content: " »";
+        }
+        &:last-child {
+          &:after {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
+
+ul.index li {
+  margin-bottom: 0.25em;
+}
+
+p {
+  margin-bottom: 1em;
 }

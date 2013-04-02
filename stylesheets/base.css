@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(reset.css);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
 * {
@@ -7,7 +8,7 @@
 
 body {
   font-family: "Open Sans", "Segoe UI", "Myriad Pro", sans-serif;
-  color: #666;
+  color: #666666;
   font-size: 16px;
   line-height: 1.2em;
   text-rendering: optimizeLegibility;
@@ -15,7 +16,7 @@ body {
 
 .container {
   *zoom: 1;
-  max-width: 68em;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto; }
   .container:before, .container:after {
@@ -30,6 +31,9 @@ a {
   a:hover, a:focus {
     outline: 0;
     color: #90b52a; }
+
+b, strong {
+  font-weight: bold; }
 
 header {
   background-color: #f7f7f7;
@@ -85,8 +89,9 @@ header {
         header .tagline:last-child {
           margin-right: 0; } }
     header .tagline a {
-      color: #666; }
+      color: #666666; }
     header .tagline h2 {
+      font-size: 1em;
       line-height: 28px; }
   header .buttons {
     display: block;
@@ -120,3 +125,38 @@ header {
       margin-left: 5px; }
   header h2 {
     display: inline; }
+
+.article h3 {
+  border-bottom: 1px solid #CCC;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em; }
+.article ul {
+  margin-bottom: 1em; }
+  .article ul.breadcrumbs {
+    background-color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #f7f7f7));
+    background-image: -webkit-linear-gradient(top, white, #f7f7f7);
+    background-image: -moz-linear-gradient(top, white, #f7f7f7);
+    background-image: -ms-linear-gradient(top, white, #f7f7f7);
+    background-image: -o-linear-gradient(top, white, #f7f7f7);
+    background-image: linear-gradient(top, white, #f7f7f7);
+    border: 1px solid #efefef;
+    font-size: 0.9em;
+    padding: 0.25em; }
+    .article ul.breadcrumbs a {
+      color: #666666; }
+    .article ul.breadcrumbs li {
+      display: inline; }
+      .article ul.breadcrumbs li.current {
+        font-weight: bold; }
+      .article ul.breadcrumbs li:after {
+        content: " »"; }
+      .article ul.breadcrumbs li:last-child:after {
+        content: ""; }
+
+ul.index li {
+  margin-bottom: 0.25em; }
+
+p {
+  margin-bottom: 1em; }
