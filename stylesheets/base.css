@@ -131,6 +131,11 @@ header {
   font-size: 1.2em;
   margin-bottom: 0.5em;
   padding-bottom: 0.3em; }
+.article h4 {
+  border-bottom: 1px solid #CCC;
+  font-size: 1.1em;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.2em; }
 .article ul {
   margin-bottom: 1em; }
   .article ul.breadcrumbs {
@@ -154,9 +159,18 @@ header {
         content: " »"; }
       .article ul.breadcrumbs li:last-child:after {
         content: ""; }
+.article img {
+  max-width: 100%;
+  margin-bottom: 1em; }
 
 ul.index li {
   margin-bottom: 0.25em; }
 
 p {
+  line-height: 1.3em;
   margin-bottom: 1em; }
+
+ul.disc {
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-left: 10px; }
