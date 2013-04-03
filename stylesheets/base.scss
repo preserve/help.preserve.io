@@ -179,3 +179,7 @@ ul.changes {
     border-bottom: 1px solid #EEE;
   }
 }
+
+.left, .right {
+  @include span-columns(6);
+}

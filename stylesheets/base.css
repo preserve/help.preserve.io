@@ -179,3 +179,11 @@ ul.changes li {
   margin-bottom: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #EEE; }
+
+.left, .right {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .left:last-child, .right:last-child {
+    margin-right: 0; }
