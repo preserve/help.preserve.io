@@ -2,20 +2,25 @@
 @import "bourbon/bourbon";
 $max-width: 800px;
 @import "neat/neat";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
+@import url(http://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
 $bodyFontColor: #666;
-$mainLinkColor: #247985;
-$mainLinkHoverColor: #90b52a;
+$mainColor: #90b52a;
+$mainLinkColor: #2980b9;
+$mainLinkHoverColor: #34495e;
 $mobile: new-breakpoint(max-width 500px 6);
 
 body {
-  font-family: "Open Sans", "Segoe UI", "Myriad Pro", sans-serif;
+  font-family: "Source Sans Pro", "Segoe UI", "Myriad Pro", sans-serif;
   color: $bodyFontColor;
   font-size: 16px;
   line-height: 1.2em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
 }
 
 .container {
@@ -37,8 +42,8 @@ b, strong {
 }
 
 header {
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #eee;
+  background-color: $mainColor;
+  border-bottom: none;
   padding: 10px 0;
   margin-bottom: 25px;
   height: 50px;
@@ -69,21 +74,30 @@ header {
     }
   }
   .tagline {
-    @include span-columns(2);
+    @include span-columns(5);
     @include media($mobile) {
       @include span-columns(6);
       @include pad(default 20px);
     }
     a {
-      color: $bodyFontColor;
+      // color: $bodyFontColor;
+      color: #fff;
+      font-size: 1.2em;
     }
     h2 {
-      font-size: 1em;
+      font-size: 1.1em;
       line-height: 28px;
+      font-weight: 700;
+      span {
+        font-weight: normal;
+        font-family: "Questrial";
+        margin-left: 2px;
+        font-size: 0.9em;
+      }
     }
   }
   .buttons {
-    @include span-columns(9);
+    @include span-columns(7);
     @include media($mobile) {
       @include span-columns(6);
       @include pad(default 20px);
@@ -91,6 +105,14 @@ header {
     a {
       line-height: 28px;
       font-size: 13px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.5em 1em;
+      border-radius: 3px;
+      font-weight: 700;
+      color: #90b52a;
+      &:hover, &:focus {
+        background: rgba(255,255,255,1);
+      }
     }
   }
   .links {
@@ -114,13 +136,11 @@ header {
 
 .article {
   h3 {
-    border-bottom: 1px solid #CCC;
     font-size: 1.2em;
     margin-bottom: 0.5em;
     padding-bottom: 0.3em;
   }
   h4 {
-    border-bottom: 1px solid #CCC;
     font-size: 1.1em;
     margin-bottom: 0.4em;
     padding-bottom: 0.2em;
