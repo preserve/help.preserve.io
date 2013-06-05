@@ -8,6 +8,7 @@ $max-width: 800px;
 $bodyFontColor: #666;
 $mainColor: #90b52a;
 $mainLinkColor: #2980b9;
+$mainLinkColorLight: #f2faff;
 $mainLinkHoverColor: #34495e;
 $mobile: new-breakpoint(max-width 500px 6);
 
@@ -39,6 +40,11 @@ a {
 
 b, strong {
   font-weight: bold;
+}
+
+.alt-font {
+  font-weight: normal;
+  font-family: "Questrial";
 }
 
 header {
@@ -89,8 +95,6 @@ header {
       line-height: 28px;
       font-weight: 700;
       span {
-        font-weight: normal;
-        font-family: "Questrial";
         margin-left: 2px;
         font-size: 0.9em;
       }
@@ -148,20 +152,21 @@ header {
   ul {
     margin-bottom: 1em;
     &.breadcrumbs {
-      @include linear-gradient(#fff, #f7f7f7);
-      border: 1px solid #efefef;
       font-size: 0.9em;
-      padding: 0.25em;
+      padding: 0.5em 1em;
+      border-radius: 3px;
+      background: $mainLinkColorLight;
+      color: $mainLinkHoverColor;
       a {
-        color: $bodyFontColor;
+        color: $mainLinkColor;
       }
       li {
         display: inline;
         &.current {
-          font-weight: bold;
+          // font-weight: 600;
         }
         &:after {
-          content: " »";
+          content: " › ";
         }
         &:last-child {
           &:after {

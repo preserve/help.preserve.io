@@ -38,6 +38,10 @@ a {
 b, strong {
   font-weight: bold; }
 
+.alt-font {
+  font-weight: normal;
+  font-family: "Questrial"; }
+
 header {
   background-color: #90b52a;
   border-bottom: none;
@@ -99,8 +103,6 @@ header {
       line-height: 28px;
       font-weight: 700; }
       header .tagline h2 span {
-        font-weight: normal;
-        font-family: "Questrial";
         margin-left: 2px;
         font-size: 0.9em; }
   header .buttons {
@@ -154,24 +156,17 @@ header {
 .article ul {
   margin-bottom: 1em; }
   .article ul.breadcrumbs {
-    background-color: white;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #f7f7f7));
-    background-image: -webkit-linear-gradient(top, white, #f7f7f7);
-    background-image: -moz-linear-gradient(top, white, #f7f7f7);
-    background-image: -ms-linear-gradient(top, white, #f7f7f7);
-    background-image: -o-linear-gradient(top, white, #f7f7f7);
-    background-image: linear-gradient(top, white, #f7f7f7);
-    border: 1px solid #efefef;
     font-size: 0.9em;
-    padding: 0.25em; }
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    background: #f2faff;
+    color: #34495e; }
     .article ul.breadcrumbs a {
-      color: #666666; }
+      color: #2980b9; }
     .article ul.breadcrumbs li {
       display: inline; }
-      .article ul.breadcrumbs li.current {
-        font-weight: bold; }
       .article ul.breadcrumbs li:after {
-        content: " »"; }
+        content: " › "; }
       .article ul.breadcrumbs li:last-child:after {
         content: ""; }
 .article img {
