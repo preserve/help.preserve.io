@@ -5,7 +5,6 @@ $max-width: 800px;
 @import "sourcesanspro/sourcesanspro.css";
 
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
-@import url(http://fonts.googleapis.com/css?family=Questrial);
 
 $bodyFontColor: #666;
 $mainColor: #90b52a;
@@ -49,7 +48,7 @@ b, strong {
 
 .alt-font {
   font-weight: normal;
-  font-family: "Questrial";
+  font-family: "Source Sans Pro";
 }
 
 header {
@@ -85,7 +84,7 @@ header {
     }
   }
   .tagline {
-    @include span-columns(5);
+    @include span-columns(8);
     @include media($mobile) {
       @include span-columns(6);
       @include pad(default 20px);
@@ -107,17 +106,20 @@ header {
     }
   }
   .buttons {
-    @include span-columns(7);
+    @include span-columns(4);
     @include media($mobile) {
       @include span-columns(6);
       @include pad(default 20px);
     }
     a {
+      border-radius: 2px;
+      padding: 0 10px;
+      display: inline-block;
       line-height: 28px;
-      font-size: 13px;
+      padding-top: 3px;
+      margin-top: -1px;
+      font-size: 0.9em;
       background: rgba(255, 255, 255, 0.9);
-      padding: 0.5em 1em;
-      border-radius: 3px;
       font-family: "Source Sans Pro Bold", sans-serif;
       color: #90b52a;
       &:hover, &:focus {

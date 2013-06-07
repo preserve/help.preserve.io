@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url(reset.css);
 @import url(sourcesanspro/sourcesanspro.css);
-@import url(http://fonts.googleapis.com/css?family=Questrial);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -44,7 +43,7 @@ b, strong {
 
 .alt-font {
   font-weight: normal;
-  font-family: "Questrial"; }
+  font-family: "Source Sans Pro"; }
 
 header {
   background-color: #90b52a;
@@ -87,7 +86,7 @@ header {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 40.29137%; }
+    width: 65.88078%; }
     header .tagline:last-child {
       margin-right: 0; }
     @media screen and (max-width: 500px) {
@@ -114,7 +113,7 @@ header {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 57.35098%; }
+    width: 31.76157%; }
     header .buttons:last-child {
       margin-right: 0; }
     @media screen and (max-width: 500px) {
@@ -127,11 +126,14 @@ header {
         header .buttons:last-child {
           margin-right: 0; } }
     header .buttons a {
+      border-radius: 2px;
+      padding: 0 10px;
+      display: inline-block;
       line-height: 28px;
-      font-size: 13px;
+      padding-top: 3px;
+      margin-top: -1px;
+      font-size: 0.9em;
       background: rgba(255, 255, 255, 0.9);
-      padding: 0.5em 1em;
-      border-radius: 3px;
       font-family: "Source Sans Pro Bold", sans-serif;
       color: #90b52a; }
       header .buttons a:hover, header .buttons a:focus {
