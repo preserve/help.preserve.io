@@ -21,7 +21,8 @@ h1, h2, h3, h4, h5, h6 {
   *zoom: 1;
   max-width: 800px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 0 1em; }
   .container:before, .container:after {
     content: " ";
     display: table; }
