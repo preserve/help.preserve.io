@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(reset.css);
-@import url(http://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+@import url(sourcesanspro/sourcesanspro.css);
+@import url(http://fonts.googleapis.com/css?family=Questrial);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15,7 +16,8 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; }
+  font-weight: normal;
+  font-family: "Source Sans Pro Semibold", sans-serif; }
 
 .container {
   *zoom: 1;
@@ -37,7 +39,8 @@ a {
     color: #34495e; }
 
 b, strong {
-  font-weight: bold; }
+  font-weight: normal;
+  font-family: "Source Sans Pro Bold"; }
 
 .alt-font {
   font-weight: normal;
@@ -102,7 +105,8 @@ header {
     header .tagline h2 {
       font-size: 1.1em;
       line-height: 28px;
-      font-weight: 700; }
+      font-weight: normal;
+      font-family: "Source Sans Pro Bold", sans-serif; }
       header .tagline h2 span {
         margin-left: 2px;
         font-size: 0.9em; }
@@ -128,7 +132,7 @@ header {
       background: rgba(255, 255, 255, 0.9);
       padding: 0.5em 1em;
       border-radius: 3px;
-      font-weight: 700;
+      font-family: "Source Sans Pro Bold", sans-serif;
       color: #90b52a; }
       header .buttons a:hover, header .buttons a:focus {
         background: white; }
