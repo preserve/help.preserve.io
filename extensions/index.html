@@ -13,7 +13,31 @@ title: Extensions
   We currently offer an official Preserve extension for Google Chrome, as well as a bookmarklet which will work in all web browsers.
 </p>
 
+<div class="row">
+  <div class="left">
+    <p>
+      <h4>The Boookmarklet</h4>
+      <a href="javascript:u=location.href;t=document.title;void(open('http://preserve.io/bookmarks/new?simple=true&url='+encodeURIComponent(u)+'&title='+encodeURIComponent(t),'preserve.io','toolbar=no,scrollbars=yes,width=650,height=250'));" class="bookmarklet">Preserve this Page</a> ← Drag this to your bookmarks bar
+    </p>
+    <p>
+      Using the bookmarklet is simple, just follow these steps:
+      <ol>
+        <li>When you're at a website you'd like to bookmark, simply click the bookmarklet from your toolbar.</li>
+        <li>A window will popup which will contain the title of the page and allow you to tag the bookmark.</li>
+        <li>Once you've tagged and set any cache / privacy settings on the bookmark, click Create Bookmark.</li>
+        <li>Once you're forwarded to a page which says "Bookmark successfully created!" you can close the window.</li>
+      </ol>
+    </p>
+  </div>
+  <div class="right">
+    <a href="/images/bookmarklet-demonstration.png"><img src="/images/bookmarklet-demonstration.png" alt="Bookmarklet demonstration." /></a>
+  </div>
+</div>
+
 <p>
-  <h4>The Boookmarklet</h4>
-  <a href="javascript:u=location.href;t=document.title;void(open('http://preserve.io/bookmarks/new?simple=true&url='+encodeURIComponent(u)+'&title='+encodeURIComponent(t),'preserve.io','toolbar=no,scrollbars=yes,width=700,height=200'));" class="bookmarklet">Preserve this Page</a> ← Drag this to your bookmarks bar
+  <h4>Alfred Custom Search</h4>
+  If you're as much of a fan of <a href="http://alfredapp.com">Alfred</a> as we are, this custom web search will come in handy.
+  To add it, simply <a href="alfred://customsearch/Search%20Preserve%20for%20%22%7Bquery%7D%22/pre/utf8/noplus/http://preserve.io/bookmarks?query={query}">click here</a> and click "Oh Yes!"
+  If you'd like the Preserve logo to be displayed, drag <a href="http://cdn.preserve.io/images/apple-touch-icon-precomposed.png">this image</a> into the icon container.
+  <img src="/images/alfred-custom-search.png" alt="Preserve Aflred Custom Search" class="center" />
 </p>

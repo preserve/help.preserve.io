@@ -216,3 +216,13 @@ ul.changes {
 .left, .right {
   @include span-columns(6);
 }
+
+img.center {
+  display: block;
+  margin: 1em auto;
+}
+
+ol li {
+  list-style-position: inside;
+  list-style-type: decimal;
+}

@@ -204,3 +204,11 @@ ul.changes li {
   width: 48.82117%; }
   .left:last-child, .right:last-child {
     margin-right: 0; }
+
+img.center {
+  display: block;
+  margin: 1em auto; }
+
+ol li {
+  list-style-position: inside;
+  list-style-type: decimal; }
