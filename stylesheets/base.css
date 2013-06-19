@@ -1,22 +1,21 @@
 @charset "UTF-8";
 @import url(reset.css);
-@import url(sourcesanspro/sourcesanspro.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
-  font-family: "Source Sans Pro", "Segoe UI", "Myriad Pro", sans-serif;
+  font-family: "Open Sans", "Segoe UI", "Myriad Pro", sans-serif;
   color: #666666;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-family: "Source Sans Pro Semibold", sans-serif; }
+  font-weight: bold; }
 
 .container {
   *zoom: 1;
@@ -38,12 +37,11 @@ a {
     color: #34495e; }
 
 b, strong {
-  font-weight: normal;
-  font-family: "Source Sans Pro Bold"; }
+  font-weight: bold; }
 
 .alt-font {
-  font-weight: normal;
-  font-family: "Source Sans Pro"; }
+  font-weight: 400;
+  font-size: 0.85em; }
 
 header {
   background-color: #90b52a;
@@ -104,8 +102,7 @@ header {
     header .tagline h2 {
       font-size: 1.1em;
       line-height: 28px;
-      font-weight: normal;
-      font-family: "Source Sans Pro Bold", sans-serif; }
+      font-weight: bold; }
       header .tagline h2 span {
         margin-left: 2px;
         font-size: 0.9em; }
@@ -126,15 +123,13 @@ header {
         header .buttons:last-child {
           margin-right: 0; } }
     header .buttons a {
-      border-radius: 2px;
+      border-radius: 3px;
       padding: 0 10px;
       display: inline-block;
-      line-height: 28px;
-      padding-top: 3px;
-      margin-top: -1px;
-      font-size: 0.9em;
+      line-height: 29px;
+      font-size: 0.85em;
       background: rgba(255, 255, 255, 0.9);
-      font-family: "Source Sans Pro Bold", sans-serif;
+      font-weight: bold;
       color: #90b52a; }
       header .buttons a:hover, header .buttons a:focus {
         background: white; }
@@ -154,7 +149,7 @@ header {
 
 .article h3 {
   font-size: 1.2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   padding-bottom: 0.3em; }
 .article h4 {
   font-size: 1.1em;
@@ -185,7 +180,7 @@ ul.index li {
 
 p {
   line-height: 1.3em;
-  margin-bottom: 1em; }
+  margin-bottom: 0.85em; }
 
 ul.disc {
   list-style-position: inside;
