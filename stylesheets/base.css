@@ -1,20 +1,22 @@
 @charset "UTF-8";
 @import url(reset.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
-  font-family: 'Ideal Sans SSm A', 'Ideal Sans SSm B', sans-serif;
-  color: #666666;
-  font-size: 14px;
+  font-family: "Open Sans", "Segoe UI", "Myriad Pro", sans-serif;
+  color: #8c8c8c;
+  font-size: 16px;
   line-height: 1.2em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700; }
+  font-weight: normal;
+  color: #333333; }
 
 .container {
   *zoom: 1;
@@ -29,29 +31,28 @@ h1, h2, h3, h4, h5, h6 {
     clear: both; }
 
 a {
-  color: #2980b9;
+  color: inherit;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1px;
   text-decoration: none; }
   a:hover, a:focus {
     outline: 0;
-    color: #34495e; }
+    color: #333333; }
 
 b, strong {
-  font-weight: 700; }
+  font-weight: bold; }
 
 .alt-font {
-  font-weight: 400;
-  font-size: 0.85em; }
+  font-weight: 400; }
 
 header {
-  background-color: #90b52a;
+  background-color: #8fb63c;
   border-bottom: none;
-  padding: 10px 0;
-  margin-bottom: 25px;
-  height: 50px; }
+  padding: 20px 0;
+  margin-bottom: 3.5em; }
   header .logo {
     float: left;
     position: relative;
-    top: -10px;
     margin-right: 10px; }
     header .logo h1 {
       float: left;
@@ -97,14 +98,17 @@ header {
           margin-right: 0; } }
     header .tagline a {
       color: #fff;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      border: none; }
+      header .tagline a img {
+        float: left; }
     header .tagline h2 {
-      font-size: 1.1em;
-      line-height: 28px;
-      font-weight: bold; }
+      font-size: 1em;
+      line-height: 40px;
+      color: white; }
       header .tagline h2 span {
-        margin-left: 2px;
-        font-size: 0.9em; }
+        margin-left: 1em;
+        font-size: 1em; }
   header .buttons {
     display: block;
     float: left;
@@ -123,15 +127,15 @@ header {
           margin-right: 0; } }
     header .buttons a {
       border-radius: 3px;
-      padding: 0 10px;
+      padding: 0 20px;
       display: inline-block;
-      line-height: 29px;
+      line-height: 40px;
       font-size: 0.85em;
-      background: rgba(255, 255, 255, 0.9);
-      font-weight: bold;
-      color: #90b52a; }
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.75);
+      border: none; }
       header .buttons a:hover, header .buttons a:focus {
-        background: white; }
+        color: white; }
   header .links {
     float: left;
     margin-right: 15px; }
@@ -147,26 +151,33 @@ header {
     display: inline; }
 
 .article h3 {
-  font-size: 1.2em;
-  margin-bottom: 0.2em;
-  padding-bottom: 0.3em; }
+  font-size: 1em;
+  margin-bottom: 0.8em;
+  margin-top: 1em; }
+  .article h3 + ul {
+    margin-bottom: 2em; }
 .article h4 {
-  font-size: 1.1em;
-  margin-bottom: 0.4em;
+  font-size: 1em;
+  margin-bottom: 1.5em;
   padding-bottom: 0.2em; }
 .article ul {
   margin-bottom: 1em; }
+  .article ul li {
+    line-height: 1.5em; }
   .article ul.breadcrumbs {
     font-size: 0.9em;
     padding: 0.5em 1em;
-    border-radius: 3px;
-    background: #f2faff;
-    color: #34495e; }
+    margin-bottom: 3em;
+    background: white;
+    border: 2px solid #f7f7f7;
+    color: inherit; }
     .article ul.breadcrumbs a {
-      color: #2980b9; }
+      color: inherit; }
     .article ul.breadcrumbs li {
-      display: inline; }
+      display: inline;
+      line-height: 1.7em; }
       .article ul.breadcrumbs li:after {
+        opacity: 0.5;
         content: " › "; }
       .article ul.breadcrumbs li:last-child:after {
         content: ""; }
@@ -178,8 +189,8 @@ ul.index li {
   margin-bottom: 0.25em; }
 
 p {
-  line-height: 1.3em;
-  margin-bottom: 0.85em; }
+  line-height: 1.5em;
+  margin-bottom: 1.5em; }
 
 ul.disc {
   list-style-position: inside;

@@ -6,23 +6,26 @@ $max-width: 800px;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,600);
 
-$bodyFontColor: #666;
-$mainColor: #90b52a;
-$mainLinkColor: #2980b9;
+$bodyFontColor: #8c8c8c;
+$headerFontColor: #333;
+$mainColor: #8FB63C;
+$mainColorDark: #8fb63c;
+$mainLinkColor: #8fb63c;
 $mainLinkColorLight: #f2faff;
-$mainLinkHoverColor: #34495e;
+$mainLinkHoverColor: #4b5e23;
 $mobile: new-breakpoint(max-width 500px 6);
 
 body {
   font-family: "Open Sans", "Segoe UI", "Myriad Pro", sans-serif;
   color: $bodyFontColor;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+  font-weight: normal;
+  color: $headerFontColor;
 }
 
 .container {
@@ -31,12 +34,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: $mainLinkColor;
+  color: inherit;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1px;
   text-decoration: none;
 
   &:hover, &:focus {
     outline: 0;
-    color: $mainLinkHoverColor;
+    color: $headerFontColor;
   }
 }
 
@@ -47,19 +52,19 @@ b, strong {
 
 .alt-font {
   font-weight: 400;
-  font-size: 0.85em;
+  // font-size: 0.85em;
 }
 
 header {
-  background-color: $mainColor;
+  background-color: $mainColorDark;
   border-bottom: none;
-  padding: 10px 0;
-  margin-bottom: 25px;
-  height: 50px;
+  padding: 20px 0;
+  margin-bottom: 3.5em;
+  // height: 50px;
   .logo {
     float: left;
     position: relative;
-    top: -10px;
+    // top: -10px;
     margin-right: 10px;
     h1 {
       float: left;
@@ -92,15 +97,20 @@ header {
       // color: $bodyFontColor;
       color: #fff;
       font-size: 1.2em;
+      border: none;
+      img {
+        float: left;
+      }
     }
     h2 {
-      font-size: 1.1em;
-      line-height: 28px;
-      font-weight: bold;
+      font-size: 1em;
+      line-height: 40px;
+      color: white;
+      // font-weight: bold;
       // font-family: "Source Sans Pro Bold", sans-serif;
       span {
-        margin-left: 2px;
-        font-size: 0.9em;
+        margin-left: 1em;
+        font-size: 1em;
       }
     }
   }
@@ -112,15 +122,18 @@ header {
     }
     a {
       border-radius: 3px;
-      padding: 0 10px;
+      padding: 0 20px;
       display: inline-block;
-      line-height: 29px;
+      line-height: 40px;
       font-size: 0.85em;
-      background: rgba(255, 255, 255, 0.9);
-      font-weight: bold;
-      color: #90b52a;
+      // background: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+      // letter-spacing: 0.01em;
+      color: rgba(255,255,255,0.75);
+      border: none;
+      // text-transform: uppercase;
       &:hover, &:focus {
-        background: rgba(255,255,255,1);
+        color: white;
       }
     }
   }
@@ -145,32 +158,41 @@ header {
 
 .article {
   h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.2em;
-    padding-bottom: 0.3em;
+    font-size: 1em;
+    margin-bottom: 0.8em;
+    margin-top: 1em;
+    & + ul {
+      margin-bottom: 2em;
+    }
   }
   h4 {
-    font-size: 1.1em;
-    margin-bottom: 0.4em;
+    font-size: 1em;
+    margin-bottom: 1.5em;
     padding-bottom: 0.2em;
   }
   ul {
     margin-bottom: 1em;
+    li {
+      line-height: 1.5em;
+    }
     &.breadcrumbs {
       font-size: 0.9em;
       padding: 0.5em 1em;
-      border-radius: 3px;
-      background: $mainLinkColorLight;
-      color: $mainLinkHoverColor;
+      margin-bottom: 3em;
+      background: white;
+      border: 2px solid #f7f7f7;
+      color: inherit;
       a {
-        color: $mainLinkColor;
+        color: inherit;
       }
       li {
         display: inline;
+        line-height: 1.7em;
         &.current {
           // font-weight: 600;
         }
         &:after {
+          opacity: 0.5;
           content: " › ";
         }
         &:last-child {
@@ -192,8 +214,8 @@ ul.index li {
 }
 
 p {
-  line-height: 1.3em;
-  margin-bottom: 0.85em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 ul.disc {
